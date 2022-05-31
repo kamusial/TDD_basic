@@ -1,0 +1,23 @@
+from the_functions import *
+
+def test1():
+    #prosty warunek
+    assert ile_osob(750, 10, 5) == 5000
+    #zaokrąglenie w dół
+    assert ile_osob(1,1,1) == 0
+    #zaokrąglenie w dół
+    assert ile_osob(20, 50, 2) == 266
+    #odpowiedź na ujemne wartości
+    assert ile_osob(20, 50, -3) == 0
+    assert ile_osob(20, -50, -3) == 0
+    assert ile_osob(20, 50, 2.5) == 0
+    assert ile_osob(10.5, 30.7, 3) == 128
+    assert ile_osob(10.5, 'Mama', 3) == 0
+
+def test2():
+    #prosty warunek
+    assert ile_ze_srodkami(100,"T") == 110
+    #zaokrąglenie w dół
+    assert ile_ze_srodkami(87, "N") == 43
+    #inne
+    assert ile_ze_srodkami('Mama', 65) == 0
